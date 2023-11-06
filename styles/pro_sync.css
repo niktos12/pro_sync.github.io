@@ -1020,10 +1020,20 @@ body main .faq .questions .question .question-div .h2-question {
     font-size: 18px;
   }
 }
+@media (max-width: 1023px) {
+  body main .faq .questions .question .question-div .h2-question {
+    font-size: 16px;
+  }
+}
 @media (max-width: 767px) {
   body main .faq .questions .question .question-div .h2-question {
     font-size: 16px;
     max-width: 350px;
+  }
+}
+@media (max-width: 389px) {
+  body main .faq .questions .question .question-div .h2-question {
+    max-width: 250px;
   }
 }
 body main .faq .questions .question .question-div .img-question {

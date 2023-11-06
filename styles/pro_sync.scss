@@ -12,11 +12,16 @@ $breakpoint_for_imgs:1101px;
 $breakpoint_for_final_imgs:885px;
 $breakpoint_for_partners:619px;
 $breakpoint_for_footer:402px;
-
+$breakpoint_for_faq: 389px;
 $breakpoint_final:431px;
 @mixin final(){
     @media (max-width:$breakpoint_final) {
         @content      
+    }
+};
+@mixin faq(){
+    @media (max-width:$breakpoint_for_faq) {
+        @content
     }
 };
 @mixin footerFinal(){
@@ -908,20 +913,28 @@ body{
                 @include verticalTable(){
                     justify-content: center;
                 }
-
+                
                 .h2-question{
                     font-family: Montserrat,sans-serif;
                     font-size: 24px;
                     font-weight: 500;
+                    
                     @include firstBreakpoint(){
                         font-size: 20px;
                     }
                     @include secondBreak(){
                         font-size: 18px;
                     }
+                    @include horizontalTable(){
+                        font-size: 16px;
+                        
+                    }
                     @include verticalTable(){
                         font-size: 16px;
                         max-width: 350px;
+                    }
+                    @include faq(){
+                        max-width: 250px;
                     }
                 }
                 .img-question{
