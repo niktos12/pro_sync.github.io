@@ -122,11 +122,19 @@ $breakpoint_final:431px;
 
 body{
     header{
+        position: sticky;
+        top: 0;
+        z-index: 2;
         .header{
             display: flex;
             justify-content: space-between;
             padding: 0px 142px;
             align-items: center;
+            position: sticky;
+            // z-index: 1;
+            background-color: #D9D9D9;
+
+            top: 0;
             @include thirdBreak(){
                 padding: 0 80px;
             }
@@ -277,6 +285,7 @@ body{
                 font-family: Montserrat,sans-serif;
                 font-size: 24px;
                 font-weight: 600;
+                cursor: pointer;
                 @include firstBreakpoint(){
                     font-size: 20px;
                 }
@@ -488,6 +497,7 @@ body{
                         grid-template-columns: 1fr;
                     }
                     .image{
+                        object-fit: contain;
                         max-width: 20%;
                         @include comments(){
                             max-width: 15%;
@@ -509,7 +519,7 @@ body{
                     }
                     @include forImgs(){
                         display: grid;
-                        grid-template-columns: 280px 280px;
+                        grid-template-columns: 1fr 1fr;
                         column-gap: 100px;
                         margin-left: 0;
                     }
@@ -520,7 +530,11 @@ body{
                     }
                     .image:last-of-type{
                         justify-self: center;
-                        margin-right: -350px;
+                        margin-right: -200px;
+                        
+                        @include forImgs(){
+                            margin-right: -350px;
+                        }
                         @include forPartners(){
                             margin-right: 0;
                             justify-items: center;
@@ -532,7 +546,7 @@ body{
                             max-width: 15%;
                         }
                         @include forImgs(){
-                            max-width: 100%;
+                            max-width: 90%;
                         }
                     }
                 }
@@ -562,6 +576,7 @@ body{
                 font-size: 24px;
                 font-weight: 600;
                 margin-bottom: 180px;
+                cursor: pointer;
                 @include firstBreakpoint(){
                     font-size: 20px;
                 }
@@ -656,6 +671,7 @@ body{
                             color: #000;
                             background-color: #FFF;
                             max-width: 206px;
+                            cursor: pointer;
                             @include firstBreakpoint(){
                                 font-size: 18px;
                             }

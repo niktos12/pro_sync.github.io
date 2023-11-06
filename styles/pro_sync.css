@@ -27,11 +27,19 @@
   }
 }
 
+body header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
 body header .header {
   display: flex;
   justify-content: space-between;
   padding: 0px 142px;
   align-items: center;
+  position: sticky;
+  background-color: #D9D9D9;
+  top: 0;
 }
 @media (max-width: 1156px) {
   body header .header {
@@ -222,6 +230,7 @@ body main .efficiency .efficiency-div .btn-efficiency {
   font-family: Montserrat, sans-serif;
   font-size: 24px;
   font-weight: 600;
+  cursor: pointer;
 }
 @media (max-width: 1513px) {
   body main .efficiency .efficiency-div .btn-efficiency {
@@ -489,6 +498,7 @@ body main .parners .partners-div .imgs-partners {
   }
 }
 body main .parners .partners-div .imgs-partners .image {
+  object-fit: contain;
   max-width: 20%;
 }
 @media (max-width: 1316px) {
@@ -516,7 +526,7 @@ body main .parners .partners-div .imgs-partners2 {
 @media (max-width: 1101px) {
   body main .parners .partners-div .imgs-partners2 {
     display: grid;
-    grid-template-columns: 280px 280px;
+    grid-template-columns: 1fr 1fr;
     column-gap: 100px;
     margin-left: 0;
   }
@@ -530,7 +540,12 @@ body main .parners .partners-div .imgs-partners2 {
 }
 body main .parners .partners-div .imgs-partners2 .image:last-of-type {
   justify-self: center;
-  margin-right: -350px;
+  margin-right: -200px;
+}
+@media (max-width: 1101px) {
+  body main .parners .partners-div .imgs-partners2 .image:last-of-type {
+    margin-right: -350px;
+  }
 }
 @media (max-width: 619px) {
   body main .parners .partners-div .imgs-partners2 .image:last-of-type {
@@ -548,7 +563,7 @@ body main .parners .partners-div .imgs-partners2 .image {
 }
 @media (max-width: 1101px) {
   body main .parners .partners-div .imgs-partners2 .image {
-    max-width: 100%;
+    max-width: 90%;
   }
 }
 body main .portfolio {
@@ -578,6 +593,7 @@ body main .portfolio .more-portfolio {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 180px;
+  cursor: pointer;
 }
 @media (max-width: 1513px) {
   body main .portfolio .more-portfolio {
@@ -702,6 +718,7 @@ body main .portfolio .div-portfolio .micro-div-portfolio .text-portfolio .btn-po
   color: #000;
   background-color: #FFF;
   max-width: 206px;
+  cursor: pointer;
 }
 @media (max-width: 1513px) {
   body main .portfolio .div-portfolio .micro-div-portfolio .text-portfolio .btn-portfolio {
